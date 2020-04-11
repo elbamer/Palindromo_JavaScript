@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindromo</title>
+
+    <script>      
+        function palindromo(){
+        var palabra="anitalavalatina";
+        var salida="";
+        var cont=1;
+        for(var i=0;i<palabra.length;i++){// para recorrerlo         
+         // if(palabra.charAt(i)!=palabra.charAt(palabra.length-i-1)){  
+            var caracteres=palabra.charAt(i); 
+            var reves= palabra.charAt(palabra.length-i-1)  
+            if(caracteres!=reves)  {                      
+                   cont=0; 
+                 }    
+             if (cont==1) {
+            salida="La palabra es palindromo";
+			console.log("La palabra es palindromo");
+	    	}else  if (cont==0){
+			salida="La palabra NO es palindromo";
+            }
+            }return salida;
+         }
+         // Otra manera de comprobar si es palindromo 
+
+function Palindromo() {
+var revStr = "";
+
+var cadena= document.getElementById("cadena").value;    
+var palabra = cadena.length;
+for(var i=palabra; i>=0;i--) {
+revStr = revStr+cadena.charAt(i);//con charat--> cada uno de los caracteres
+}
+if(cadena == revStr) {
+alert(cadena+" Es Palindromo");
+} else {
+alert(cadena+" No es Palindrome");
+}
+}
+</script>
+</head>
+<body>
+   
+    <div id="demo"></div>
+<form >
+<label>Indica el nombre a comprobar:</label>
+ <input type="text" id="cadena" name="string" /><br />
+<input type="submit" value="Check" onclick="Palindromo();"/>
+</form>
+ <script>
+ var resultado= document.getElementById("demo");
+ resultado.innerText=palindromo();
+
+</script>
+</body>
+</html>
