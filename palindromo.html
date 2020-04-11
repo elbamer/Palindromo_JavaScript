@@ -34,13 +34,13 @@
 
         var cadena = document.getElementById("cadena").value;
         var palabra = cadena.length;
-        for (var i = palabra; i >= 0; i--) {
-          revStr = revStr + cadena.charAt(i); //con charat--> cada uno de los caracteres
-        }
+        for (var i = palabra; i >= 0; i--)
+         revStr = revStr + cadena.charAt(i); //con charat--> cada uno de los caracteres
         if (cadena == revStr) {
           alert(cadena + " Es Palindromo");
         } else {
           alert(cadena + " No es Palindrome");
+        // 
         }
       }
     </script>
